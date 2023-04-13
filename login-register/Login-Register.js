@@ -16,7 +16,24 @@ const LoginPage = () => {
   const handleCheck = (e) => {
 
   }
-  
+  const handleOpen= () => {
+    const card = document.querySelector('.login-register-card');
+    card.style.transform = '';
+    card.style.opacity = '';
+    setTimeout(() => {
+      setOnRegister(false); // or any other logic to close the card
+     
+    }, 500);
+  }
+
+  const handleClose= (e) => {
+    const card = document.querySelector('.login-register-card');
+    card.style.transform = 'translate(50%, -100%) scale(0.5)';
+    card.style.opacity = '0';
+    setTimeout(() => {
+      setOnRegister(false); // or any other logic to close the card
+    }, 500);
+  }
   const changeToRegister = (e) => {
     setOnRegister(true)
   }
@@ -57,7 +74,7 @@ const LoginPage = () => {
 
   return (
     <div className={`login-register-card ${onRegister ? 'register-form' : 'login-form01'}`} >
-      <span className='icon-close'>
+      <span className='icon-close' onClick={(event) => handleClose(event)}>
         <span className="close-icon-text">&times;</span>
       </span>
       <div className={`login-content ${onRegister ? 'move-left' : 'put-login'}`}>
@@ -93,12 +110,7 @@ const LoginPage = () => {
         />
         <div className='changeNavigate login-nv'>
           Don't have an account? <a onClick={changeToRegister}>Register</a>
-        </div>
-      
-      
-      
-      
-      
+        </div>       
       </div>
 
       <div className={`register-content ${onRegister ? 'put-register' : 'move-right'}`}>
