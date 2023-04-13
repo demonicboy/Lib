@@ -4,6 +4,8 @@ import App from './App';
 
 import Login from './login/Login'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const router = createBrowserRouter([

@@ -46,3 +46,19 @@
 .icon-close:hover .close-icon-text {
     font-size: 50px;
 }
+
+.form-label {
+    transform: translateY(30px); /* Move label down by 30 pixels */
+}
+.form-label:hover {
+    transform: translateY(0px); /* Move label down by 30 pixels */
+} 
+
+.form-label-focus {
+    transform: translateY(-10px); /* Move label down by 30 pixels */
+    display: block; /* Make label a block element */
+    margin-bottom: 0.5rem; /* Add bottom margin */
+    font-size: 1rem; /* Set font size */
+    color: #333; /* Set color */
+}
+  
