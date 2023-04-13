@@ -47,24 +47,25 @@ const LoginPage = () => {
       <span className='icon-close'>
         <span className="close-icon-text">&times;</span>
       </span>
-      <h2>Login</h2>
-      <div className='input-box'>
-        <span className='icon'></span>
-        <input type='email' required></input>
-        <label>Email</label>
-      </div>
-      <div className='input-box'>
-        <span className='icon'></span>
-        <input type='password' required></input>
-        <label>Password</label>
-      </div>
+      <h2 className='form-title'>Login</h2>
       <Input
         title="Email address"
         type="email"
-        className="form-control"
         name="email"
         autoConplete="email-new"
         onChange={(event) => setEmail(event.target.value)}
+      />
+      <Input
+        title="Password"
+        type="password"
+        name="password"
+        autoConplete="false"
+        onChange={(event) => setPassword(event.target.value)}
+      />
+      <input
+        type="submit"
+        className="btn-login"
+        value="Login"
       />
     </div>
   );
