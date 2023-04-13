@@ -12,14 +12,10 @@ const Input = forwardRef((props, ref) => {
         setIsFocused(false);
     };
     const handleMouseEnter = () => {
-
         setIsIn(true);
-
     }
     const handleMouseLeave = () => {
-
         setIsIn(false);
-
     };
 
     const handleChange = (event) => {
@@ -28,7 +24,6 @@ const Input = forwardRef((props, ref) => {
         else
             setHaveValue(false)
         props.onChange(event);
-
     }
 
     return (

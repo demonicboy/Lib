@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-import Login from './login-register/Login'
+import Login from './login-register/Login-Register'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

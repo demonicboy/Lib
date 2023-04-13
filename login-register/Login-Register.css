@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
-.login-form01 {
-    height: 460px;
+.login-register-card{
     width: 400px;
     padding: 60px 50px 10px 50px;
     position: fixed;
@@ -20,6 +19,43 @@
     color: #162938;
     font-weight: 700;
     text-shadow: 0 0 10px #fff;
+    overflow: hidden;
+}
+.login-content{
+    display:block;
+    transform: translate(0px, 0px);
+}
+.register-content{
+    display:block;
+}
+
+
+.move-left{
+    transition: all 0.5s;
+    transform: translate(-350px, 0px);
+}
+
+.put-login{
+    transition: all 0.5s;
+    transform: translate(0px, 0px);
+}
+.put-register{
+    transition: all 0.5s;
+    transform: translate(0px, -250px);
+}
+.move-right{
+    transition: all 0.5s;
+    transform: translate(350px, -250px);
+}
+.login-form01 {
+    transition: all 0.5s;
+    height: 460px;
+    top: 70%;
+}
+.register-form{
+    transition: all 0.5s;
+    height: 560px;
+    top: 50%;
 }
 
 .form-title {
@@ -29,7 +65,6 @@
     font-weight: 900;
     font-size: 35px;
     -webkit-text-stroke: 2px #162938;
-
 }
 
 .icon-close {
@@ -91,7 +126,6 @@
 .form-label-focus {
     display: block;
     margin-bottom: 0.5rem;
-
 }
 
 
@@ -103,7 +137,6 @@
     background: none;
     border: none;
     border-bottom: 2px solid #162938;
-    ;
     width: 100%;
     z-index: -1;
     color: #041b2c;
@@ -116,9 +149,9 @@
     outline: none;
 }
 
-.btn-login {
+.btn-form{
     position: absolute;
-    top: 320px;
+    top: 253px;
     left: 50%;
     margin-left: -150px;
     height: 40px;
@@ -130,8 +163,16 @@
     text-shadow: 0px 0px 25px #fff;
     box-shadow: 0px 0px 100px #fff;
 }
+.btn-register{
+    top: 350px;
+}
 
-.btn-login:hover {
+
+.btn-login {
+    top: 253px;
+}
+
+.btn-form:hover {
     margin-left: -155px;
     margin-top: -2px;
     height: 44px;
@@ -142,7 +183,7 @@
     font-size: 20px;
 }
 
-.btn-login:active {
+.btn-form:active {
     margin-top: 1px;
     margin-left: -150px;
     height: 40px;
@@ -159,34 +200,46 @@
     right: 5px;
 }
 
-.registerNavigate {
+
+
+.changeNavigate {
     position: absolute;
-    top: 380px;
-    left: 80px;
+    
+    left: 30px;
     font-size: 14px;
     cursor: default;
 }
-.registerNavigate a{
+.login-nv{
+    top: 330px;
+}
+.register-nv{
+    top: 430px;
+}
+.changeNavigate a{
     color: #162938;
     font-weight: 900;
     text-decoration: none;
     font-size: 14px;
     -webkit-text-stroke: 0.5px #162938;
 }
-.registerNavigate a:hover{
+.changeNavigate a:hover{
     color: #203b50;
     font-weight: 900;
     text-decoration:none;
     -webkit-text-stroke: 0.8px #203b50;
+    cursor: pointer;
 }
 .remember-forgot{
     position: absolute;
     display: flex;
-    top: 285px;
-    left: 50px;
+    top: 220px;
+    left: 0px;
     justify-content: space-between;
-    width: 297px;
+    width: 295px;
 }
+
+
+
 .forgot{
     color: #0a131a;
     font-weight:bold;
@@ -198,6 +251,25 @@
 .forgot:hover{
     color: #264761;
 }
+.agree-term{
+    position: absolute;
+    display: flex;
+    top: 310px;
+    left: 0px;
+    width: 295px;
+}
+.agree{
+    color: #0a131a;
+    font-weight:bold;
+    text-decoration:none;
+    font-size: 14px;
+    display: block;
+    margin-left: 0px;
+}
+.agree:hover{
+    color: #264761;
+}
+
 
 .check-remember{
     font-size: 14px;
