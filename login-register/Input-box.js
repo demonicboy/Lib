@@ -35,8 +35,10 @@ const Input = forwardRef((props, ref) => {
         <div className="input-div">
             <label
                 htmlFor={props.name}
-                className={`form-label-base ${isFocused || isIn || haveValue? 'form-label-focus' : 'form-label'}`}
+                className={`form-label-base ${isFocused || isIn || haveValue ? 'form-label-focus' : 'form-label'}`}
                 style={{ transition: 'all 0.3s' }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
                 {props.title}
             </label>
@@ -55,8 +57,9 @@ const Input = forwardRef((props, ref) => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             />
-
+            {props.symbol !== "" && <i className={`${props.symbol} end-symbol`} />}
             <div className={props.errorDiv}>{props.errorMsg}</div>
+            
         </div>
 
     )

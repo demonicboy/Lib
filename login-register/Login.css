@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.login-form01 {
+    height: 460px;
+    width: 400px;
+    padding: 60px 50px 10px 50px;
+    position: fixed;
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    border-radius: 30px 0px 30px 30px;
+    background-color: rgba(226, 226, 226, 0.2);
+    /* fallback background color with opacity */
+    backdrop-filter: blur(7px);
+    border: 2px solid rgba(255, 255, 255, 0.705);
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+    font-family: 'Poppins', sans-serif;
+    color: #162938;
+    font-weight: 700;
+    text-shadow: 0 0 10px #fff;
+}
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    /* căn giữa theo chiều ngang */
+    font-weight: 900;
+    font-size: 35px;
+    -webkit-text-stroke: 2px #162938;
+
+}
+
+.icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    text-shadow: 0 0 5px #fff;
+}
+
+.icon-close:hover {
+    background: #2f5069;
+}
+
+.close-icon-text {
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    line-height: 30px;
+}
+
+.icon-close:hover .close-icon-text {
+    font-size: 50px;
+}
+
+.input-div {
+    position: relative;
+    display: flex;
+    margin-bottom: 90px;
+    margin-top: 20px;
+}
+
+.form-label-base {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-weight: 900;
+    color: #162938;
+    font-size: 18px;
+}
+
+.form-label {
+    transform: translateY(20px);
+}
+
+
+.form-label-focus {
+    display: block;
+    margin-bottom: 0.5rem;
+
+}
+
+
+.input-login {
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    text-indent: 9px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #162938;
+    ;
+    width: 100%;
+    z-index: -1;
+    color: #041b2c;
+    text-shadow: 0px 0px 10px #fff;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.input-login:focus {
+    outline: none;
+}
+
+.btn-login {
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    margin-left: -150px;
+    height: 40px;
+    width: 300px;
+    background-color: #162938;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    text-shadow: 0px 0px 25px #fff;
+    box-shadow: 0px 0px 100px #fff;
+}
+
+.btn-login:hover {
+    margin-left: -155px;
+    margin-top: -2px;
+    height: 44px;
+    width: 310px;
+    background-color: #1c3346;
+    border: #213c53 solid 1px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.btn-login:active {
+    margin-top: 1px;
+    margin-left: -150px;
+    height: 40px;
+    width: 300px;
+    background-color: #203a4e;
+    border: #1c3344 solid 2px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.end-symbol {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+}
+
+.registerNavigate {
+    position: absolute;
+    top: 380px;
+    left: 80px;
+    font-size: 14px;
+    cursor: default;
+}
+.registerNavigate a{
+    color: #162938;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 14px;
+    -webkit-text-stroke: 0.5px #162938;
+}
+.registerNavigate a:hover{
+    color: #203b50;
+    font-weight: 900;
+    text-decoration:none;
+    -webkit-text-stroke: 0.8px #203b50;
+}
+.remember-forgot{
+    position: absolute;
+    display: flex;
+    top: 285px;
+    left: 50px;
+    justify-content: space-between;
+    width: 297px;
+}
+.forgot{
+    color: #0a131a;
+    font-weight:bold;
+    text-decoration:none;
+    font-size: 14px;
+    display: block;
+    margin-left: 10px;
+}
+.forgot:hover{
+    color: #264761;
+}
+
+.check-remember{
+    font-size: 14px;
+    color: #0a131a;
+    cursor: default;
+}
+.form-check-input:checked {
+    background-color: black !important;
+    border-color: #172438 !important;
+}

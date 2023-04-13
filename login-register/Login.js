@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Login.css';
 import Input from './Input-box';
+import CheckBox from './check-box';
 
 
 
@@ -10,6 +11,11 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
+
+  const handleCheck = (e) => {
+
+  }
+
   const handleSubmit = (e) => {
     const backendUrl = process.env.REACT_APP_BACKEND;
     console.log('Backend URL:', backendUrl);
@@ -54,6 +60,7 @@ const LoginPage = () => {
         name="email"
         autoConplete="email-new"
         onChange={(event) => setEmail(event.target.value)}
+        symbol="fa fa-envelope"
       />
       <Input
         title="Password"
@@ -61,12 +68,24 @@ const LoginPage = () => {
         name="password"
         autoConplete="false"
         onChange={(event) => setPassword(event.target.value)}
+        symbol="fa fa-lock"
       />
+      <div className='remember-forgot'>
+        <CheckBox
+          title="Remember me"
+          name="Remember me"
+          onChange={(event) => handleCheck(event)}
+        />
+        <a className='forgot' href='#!'>Forgot password?</a>
+      </div>
       <input
         type="submit"
         className="btn-login"
         value="Login"
       />
+      <div className='registerNavigate'>
+        Don't have an account? <a href='#!'>Register</a>
+      </div>
     </div>
   );
 };
