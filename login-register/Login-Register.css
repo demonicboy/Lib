@@ -6,7 +6,6 @@
     padding: 60px 50px 10px 50px;
     position: fixed;
     position: relative;
-    top: 70%;
     left: 50%;
     transform: translate(-50%, -35%);
     border-radius: 30px 0px 30px 30px;
@@ -50,12 +49,12 @@
 .login-form01 {
     transition: all 0.5s;
     height: 460px;
-    top: 70%;
+    top: calc((var(--device-height) - 460px)/2 + 100px);
 }
 .register-form{
     transition: all 0.5s;
     height: 560px;
-    top: 50%;
+    top: calc((var(--device-height) - 560px)/2 + 100px);
 }
 
 .form-title {
