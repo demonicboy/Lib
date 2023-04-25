@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-import Login from './login-register/Login-Register'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginPage from './login-register/Login-Register';
@@ -14,7 +13,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App handleOpen={LoginPage.handleOpen}/>,
     children: [
-      { index: true, element: <Login /> },
+      { index: true, element: <LoginPage /> },
       {
 
       },

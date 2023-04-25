@@ -1,0 +1,75 @@
+.button-lightning-div {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(87, 101, 230, 0.2);
+    backdrop-filter: blur(7px);
+    transform: translate(-50%, -35%);
+}
+
+.button-lightning-content {
+    color: #fff;
+    font-weight: 400;
+}
+.button-lightning-border{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: var(--div-width);
+    height: var(--div-height);
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+   
+    animation: turning 4s linear infinite;
+}
+
+
+
+/* @keyframes turning {
+    0% {
+
+        clip-path: polygon(0px -19px,20px -19px, 20px 1px, 0px 1px); 
+    }
+
+    10% {
+ 
+        clip-path: polygon(calc(var(--div-width) - 20px) -19px,var(--div-width)  -19px, var(--div-width) 1px, calc(var(--div-width) - 20px) 1px); 
+    }
+
+
+
+    20% {
+
+        clip-path: polygon(calc(var(--div-width) - 1px) 0px, calc(var(--div-width) + 19px)  0px, calc(var(--div-width) + 19px) 20px, calc(var(--div-width) - 1px) 20px); 
+    }
+
+    30% {
+  
+        clip-path: polygon(calc(var(--div-width) - 1px) calc(var(--div-height) - 20px), calc(var(--div-width) + 19px)  calc(var(--div-height) - 20px), calc(var(--div-width) + 19px) var(--div-height), calc(var(--div-width) - 1px) var(--div-height)); 
+    }
+    50% {
+  
+        clip-path: polygon(calc(var(--div-width) - 20px) calc(var(--div-height) - 1px), var(--div-width) calc(var(--div-height) - 1px), var(--div-width) calc(var(--div-height) + 19px), calc(var(--div-width) - 20px) calc(var(--div-height) + 19px)); 
+    }
+    60% {
+  
+        clip-path: polygon(0px calc(var(--div-height) - 1px), 20px calc(var(--div-height) - 1px), 20px calc(var(--div-height) + 19px), 0px calc(var(--div-height) + 19px)); 
+    }
+    70% {
+  
+        clip-path: polygon(-19px calc(var(--div-height) - 20px), 1px calc(var(--div-height) - 20px), 1px var(--div-height), -19px var(--div-height)); 
+    }
+    80% {
+  
+        clip-path: polygon(-19px 0px, 1px 0px, 1px 20px, -19px 20px); 
+    }
+    100% {
+  
+        clip-path: polygon(0px -19px,20px -19px, 20px 1px, 0px 1px); 
+    }
+} */

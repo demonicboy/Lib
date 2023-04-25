@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import "./App.css"
+import ButtonLightning from "./buton-lightning/button-lightning";
 
 function App() {
   const handleOpenLoginRegister= () => {
@@ -21,7 +22,9 @@ function App() {
 
     <div className="row ">
       <div >
- 
+        <ButtonLightning
+         content="Home">
+        </ButtonLightning>
         <Outlet
           context={{
             

@@ -17,9 +17,8 @@ const Input = forwardRef((props, ref) => {
     const handleMouseLeave = () => {
         setIsIn(false);
     };
-
     const handleChange = (event) => {
-        if (event.target.value != '')
+        if (event.target.value !== '')
             setHaveValue(true)
         else
             setHaveValue(false)
