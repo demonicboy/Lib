@@ -1,0 +1,61 @@
+.button-fly-div {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(87, 101, 230, 0.2);
+    backdrop-filter: blur(7px);
+    transform: translate(-50%, -35%);
+    overflow:hidden;
+}
+
+.button-fly-border{
+    position: absolute;
+    box-shadow: 0 0 5px #ffffff;
+    animation: sparkle 4s ease-in-out infinite;
+}
+
+
+.horizontal-top{
+    top:0px;
+    height: 1px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    
+}
+.horizontal-bot{
+    bottom: 0px;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.vertical-left{
+    left: 0px;
+    width: 1px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+.vertical-right{
+    right: 0px;
+    width: 1px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+@keyframes sparkle {
+    0% {
+      box-shadow: 0 0 5px #ffffff;
+    }
+    50% {
+      box-shadow: 0 0 10px #ffffff;
+    }
+    100% {
+      box-shadow: 0 0 5px #ffffff;
+    }
+  }
+
+  .button-fly-content{
+    color: #fff;
+    font-weight: 400;
+  }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Login-Register.css';
 import Input from './Input-box';
@@ -12,23 +12,32 @@ const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [onRegister, setOnRegister] = useState('');
   const navigate = useNavigate();
+  const [deviceHeight, setDeviceHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    function handleResize() {
+      setDeviceHeight(window.innerHeight);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleCheck = (e) => {
 
   }
-  const handleOpen= () => {
+  const handleOpen = () => {
     const card = document.querySelector('.login-register-card');
     card.style.transform = '';
     card.style.opacity = '';
     setTimeout(() => {
       setOnRegister(false); // or any other logic to close the card
-     
+
     }, 500);
   }
 
-  const handleClose= (e) => {
+  const handleClose = (e) => {
     const card = document.querySelector('.login-register-card');
-    card.style.transform = 'translate(50%, -100%) scale(0.5)';
+    card.style.transform = 'translate(50%, -100%) scale(0.3)';
     card.style.opacity = '0';
     setTimeout(() => {
       setOnRegister(false); // or any other logic to close the card
@@ -71,9 +80,15 @@ const LoginPage = () => {
       .catch(error => {
       })
   };
-
+  const printScreenHeight = window.screen.height;
   return (
-    <div className={`login-register-card ${onRegister ? 'register-form' : 'login-form01'}`} >
+    <div className={`login-register-card ${onRegister ? 'register-form' : 'login-form01'}`}
+    style={{
+      '--device-height': `${deviceHeight}px`,
+    }}>
+      {
+        console.log('Print screen height:', printScreenHeight)
+      }
       <span className='icon-close' onClick={(event) => handleClose(event)}>
         <span className="close-icon-text">&times;</span>
       </span>
@@ -110,7 +125,7 @@ const LoginPage = () => {
         />
         <div className='changeNavigate login-nv'>
           Don't have an account? <a onClick={changeToRegister}>Register</a>
-        </div>       
+        </div>
       </div>
 
       <div className={`register-content ${onRegister ? 'put-register' : 'move-right'}`}>
@@ -154,7 +169,7 @@ const LoginPage = () => {
         />
         <div className='changeNavigate register-nv'>
           Already have an account <a onClick={changeToLogin}>Login</a>
-        </div> 
+        </div>
       </div>
     </div>
   );
